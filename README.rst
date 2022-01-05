@@ -1,6 +1,6 @@
 Description
 ==============
-Sample esphome integration with https://github.com/climateguard/RadSens
+ESPHome custom component sample for Climateguard RadSens
 
 
 Install
@@ -39,3 +39,11 @@ Add to device config
        - name: "Static intensity"
          accuracy_decimals: 1
          unit_of_measurement: μR/h
+
+
+References
+===============
+
+https://esphome.io/components/esphome.html?highlight=include
+https://esphome.io/custom/custom_component.html
+https://github.com/climateguard/RadSens
