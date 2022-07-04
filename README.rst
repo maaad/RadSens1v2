@@ -16,11 +16,12 @@ Add to device config
 
  esphome:
    ...
-   includes: 
-    - RadSens1v2/radSens1v2.h
-    - RadSens1v2/radSens1v2.cpp
-    - RadSens1v2/_radSens1v2.h
-  
+  libraries:
+    - Wire
+    - RadSens1v2=https://github.com/climateguard/RadSens
+  includes: 
+    - RadSens1v2/_radSens1v2.h  
+
   i2c:
 
  ...
@@ -30,8 +31,11 @@ Add to device config
      lambda: |-
        auto rad_sens = new RadSens();
        App.register_component(rad_sens);
-       return {rad_sens->IntensityDynamic_Sensor, rad_sens->IntensityStatic_Sensor};
+       return {rad_sens->NumberOfPulses_Sensor, rad_sens->IntensityDynamic_Sensor, rad_sens->IntensityStatic_Sensor};
      sensors:
+       - name: "Number of Pulses"
+         accuracy_decimals: 1
+         unit_of_measurement: imp
        - name: "Dynamic intensity"
          id: dynamic_intensity
          accuracy_decimals: 1
