@@ -29,7 +29,7 @@ Add to device config for climateguard/RadSens
  sensor:
    - platform: custom
      lambda: |-
-       auto rad_sens = new RadSens();
+       auto rad_sens = new MyRadSens();
        App.register_component(rad_sens);
        return {rad_sens->NumberOfPulses_Sensor, rad_sens->IntensityDynamic_Sensor, rad_sens->IntensityStatic_Sensor};
      sensors:

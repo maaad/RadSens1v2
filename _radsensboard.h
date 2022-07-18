@@ -2,7 +2,7 @@
 #include <RadSensBoard.h>
 #include <CountsPerMinute.h>
 
-#define SECONDS_PER_INTERVAL 5
+#define SECONDS_PER_INTERVAL 2
 
 using namespace esphome;
 
