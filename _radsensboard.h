@@ -2,7 +2,7 @@
 #include <RadSensBoard.h>
 #include <CountsPerMinute.h>
 
-#define SECONDS_PER_INTERVAL 2
+#define SECONDS_PER_INTERVAL 5
 
 using namespace esphome;
 
@@ -22,7 +22,8 @@ class MyRadSens: public PollingComponent {
   }
 
   void update() override {
-    if (myself.readData()) {}
+    if (myself.readData())
+    {
       float IntensityDynamic = myself.getRadiationLevelDynamic();
       float IntensityStatic = myself.getRadiationLevelStatic();
       int counts = myself.getPulseCount();
@@ -34,5 +35,6 @@ class MyRadSens: public PollingComponent {
       }
       IntensityDynamic_Sensor->publish_state(IntensityDynamic*1000);
       IntensityStatic_Sensor->publish_state(IntensityStatic*1000);
+    }  
   }
 };
