@@ -31,11 +31,8 @@ Add to device config for climateguard/RadSens
      lambda: |-
        auto rad_sens = new MyRadSens();
        App.register_component(rad_sens);
-       return {rad_sens->NumberOfPulses_Sensor, rad_sens->IntensityDynamic_Sensor, rad_sens->IntensityStatic_Sensor};
+       return {rad_sens->IntensityDynamic_Sensor, rad_sens->IntensityStatic_Sensor};
      sensors:
-       - name: "Number of Pulses"
-         accuracy_decimals: 1
-         unit_of_measurement: imp
        - name: "Dynamic intensity"
          id: dynamic_intensity
          accuracy_decimals: 1
