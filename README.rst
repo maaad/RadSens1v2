@@ -1,7 +1,9 @@
 Description
 ==============
-ESPHome custom component sample for Climateguard RadSens
+ESPHome custom component sample for Climateguard RadSens 1v2
 
+.. note::
+    Possible problems with Radsens 1v5 boards `workaround <https://github.com/maaad/RadSens1v2/issues/3#issuecomment-1289578773>`_
 
 Install
 ===============
