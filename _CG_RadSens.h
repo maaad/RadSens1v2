@@ -34,8 +34,12 @@ class MyRadSens: public PollingComponent {
           CurrentCPM_Sensor->publish_state(cpm.getCurrentCpm());
           MaxCPM_Sensor->publish_state(cpm.getMaximumCpm());
     }
-    IntensityDynamic_Sensor->publish_state(IntensityDynamic);
-    IntensityStatic_Sensor->publish_state(IntensityStatic);
+    if (IntensityDynamic != 0) {
+      IntensityDynamic_Sensor->publish_state(IntensityDynamic);
+    }
+    if (IntensityStatic != 0) {
+      IntensityStatic_Sensor->publish_state(IntensityStatic);
+    }
     pulsesPrev = Pulses;
   }
 };
