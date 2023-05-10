@@ -50,7 +50,7 @@ sensor:
       - name: "Device Sensivity"
         id: sensivity
         state_class: measurement
-        entity_category: config
+        entity_category: diagnostic
 ```
 
 HA service call to set device sensivity:
