@@ -54,6 +54,7 @@ Add to device config for climateguard/RadSens
 
 
 HA service call to set device sensivity:
+
 .. code-block:: yaml
 
 service: esphome.radsens_set_sensivity
