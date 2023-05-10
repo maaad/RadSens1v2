@@ -34,17 +34,23 @@ sensor:
         id: dynamic_intensity
         accuracy_decimals: 1
         unit_of_measurement: μR/h
+        state_class: measurement
       - name: "Static intensity"
         accuracy_decimals: 1
         unit_of_measurement: μR/h
+        state_class: measurement
       - name: "Current CPM"
         accuracy_decimals: 1
         unit_of_measurement: CPM
+        state_class: measurement
       - name: "Max CPM"
         accuracy_decimals: 1
         unit_of_measurement: CPM
+        state_class: measurement
       - name: "Device Sensivity"
         id: sensivity
+        state_class: measurement
+        entity_category: config
 ```
 
 HA service call to set device sensivity:

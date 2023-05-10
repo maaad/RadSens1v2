@@ -20,7 +20,7 @@ class MyRadSens: public PollingComponent, public CustomAPIDevice {
   MyRadSens(): PollingComponent(SECONDS_PER_INTERVAL * 1000) {}
 
   uint32_t pulsesPrev = 0;
-  int current_sensivity;
+  int current_sensivity = 0;
 
   void on_set_sensivity(int sensivity) {
     myself.setSensitivity(sensivity);
@@ -31,7 +31,6 @@ class MyRadSens: public PollingComponent, public CustomAPIDevice {
     myself.init();
     myself.setLedState(true);
     myself.setSensitivity(105);
-    current_sensivity = 105;
     cpm.init(60 / SECONDS_PER_INTERVAL);
     register_service( & MyRadSens::on_set_sensivity, "set_sensivity", {
       "sensivity"
@@ -60,5 +59,6 @@ class MyRadSens: public PollingComponent, public CustomAPIDevice {
       Sensivity_Sensor -> publish_state(Sensivity);
     }
     pulsesPrev = Pulses;
+    current_sensivity = Sensivity;
   }
 };
