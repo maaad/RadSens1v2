@@ -53,6 +53,8 @@ sensor:
         entity_category: diagnostic
 ```
 
+## Services
+
 HA service call to set device sensivity:
 ```yaml
 service: esphome.radsens_set_sensivity 
@@ -60,6 +62,12 @@ data:
   sensivity: "105"
 ```
 
+Reset Max CPM Counter 
+
+```yaml
+service: esphome.radsens_reset_cpm
+data: {}
+```
 
 ## Known issues
 
