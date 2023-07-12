@@ -4,6 +4,11 @@
 
 #define SECONDS_PER_INTERVAL 5
 
+#ifdef RS_DEFAULT_I2C_ADDRESS 
+#undef RS_DEFAULT_I2C_ADDRESS
+#define RS_DEFAULT_I2C_ADDRESS 0x66
+#endif 
+
 using namespace esphome;
 
 class CountsPerMinute {
