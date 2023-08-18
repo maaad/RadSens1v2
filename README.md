@@ -1,7 +1,7 @@
 
 ## Description
 
-ESPHome custom component sensor for Climateguard RadSens 1v2
+ESPHome custom component sensor for Climateguard RadSens 1v2, 1v7
 
 ## Deployment
 
