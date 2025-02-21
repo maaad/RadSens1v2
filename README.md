@@ -1,3 +1,5 @@
+> [!IMPORTANT]  
+> Migrate to external component pls. E.g. https://github.com/krbaker/esphome-radsens
 
 ## Description
 
